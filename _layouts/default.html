@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://use.fontawesome.com/36e8a382f6.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto:300" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.3.1/gridlex.min.css">
+  <title> {{page.title}} </title>
+  <link rel="shortcut icon" href=".ico">
+  <link rel="shortcut icon" href="/images/TBW_favicon.png">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+{% if page.banner == true %}
+<section class="banner {{page.bannerClass}}">
+{% endif %}
+  <header class="grid-spaceBetween">
+    <div>
+      <a href="thebackpackway.com"><img class="col-4" src="/images/TBW_favicon.png"></a>
+    </div>
+    <nav class="col-4">
+      <span></span>
+      <a href="/About">About</a>
+      <span></span>
+      <a href="/Destinations">Destinations</a>
+      <span></span>
+      <a href="/Travel-Tips">Travel Tips</a>
+      <span></span>
+      <a href="/Categories">Categories</a>
+    </nav>
+    <!-- /*how do i write a search fiels?*/ -->
+  </header>
+
+{{content}}
+
+  <footer class="grid">
+    <div class="col-8">
+      <h2>Get in touch</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Enter your name"></input>
+        <label for="e-mail">E-Mail</label>
+        <input type="text" name="e-mail" placeholder="Enter your E-Mail"></input>
+        <label for="message">Message</label>
+        <textarea name="message" placeholder="Message"></textarea>
+        <input type="submit">Send</input>
+      </form>
+    </div>
+    <div class="col-4">
+      <h2>About Me</h2>
+      <p>Hello! My name is Julia.</p>
+    </div>
+  </footer>
+</body>
+</html>

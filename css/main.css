@@ -1,0 +1,149 @@
+/* ----- INDEX -----
+- CSS RESET
+- GENERAL HELPER CLASSES
+- UNIVERSAL STYLES
+  - Layout
+  - Typography
+  - General Styles
+- HEADER & FOOTER
+- MODULAR ELEMENTS
+  - Element NAme
+- FORMS
+
+----------------------------
+Website Fonts:
+
+Website Colors:
+
+----------------------------
+
+ */
+
+/* ----- CCSS RESET ----- */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+a{
+  color:#172727;
+  text-decoration: none;
+}
+
+/* ----- GENERAL HELPER CLASSES ----- */
+
+.flex-center{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----- UNIVERSAL STYLES ----- */
+
+/*body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 21px;
+  color: #172727;
+}*/
+
+h1, h2{
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+  padding: 2%;
+  background-color: rgba(255, 255, 255, .4);
+}
+
+h1{
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+h2{
+  font-size: 40px;
+}
+
+h3, h4, h5, h6{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+.padd-sec{
+  padding: 3% 10%;
+}
+
+section div{
+  text-align: center;
+}
+
+.post-background{
+  background-image: url(/images/Zebra.png);
+  min-height: 35vh;
+  background-size: auto;
+  background-position: 10% 58%;
+}
+
+.countries h2{
+  text-align: center;
+}
+
+.country-background{
+  background-image: url(/images/Chimp.png);
+  min-height: 18vh;
+  background-size:auto;
+  background-position: 50% 50%;
+}
+
+.map{
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+/* ----- HEADER & FOOTER ----- */
+
+header{
+  padding: 2%;
+  position:fixed;
+  width: 100%;
+  top: 0;
+}
+
+.banner{
+background-image: url("/images/Uganda.png");
+padding-top: 20vh;
+min-height: 60vh;
+background-size: cover;
+background-position: 51% 65%;
+}
+
+nav{
+  color: #172727;
+  display: block;
+  text-align: right;
+}
+
+nav a{
+  padding: 4%;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+nav span{
+  border-left: 1px solid #172727;
+
+}
+
+
+
+/* ----- MODULAR ELEMENTS -----*/
+
+/* ----- FORMS ----- */
+
+
+/* index*/
