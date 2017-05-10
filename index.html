@@ -3,29 +3,40 @@ layout: default
 title: TBW
 banner: true
 posts:
-  - title: Bali
-    image: /images/Chimp.png
-  - title: Uganda
-    image: /images/Uganda.png
-  - title: Mallorca
-    image: /images/Zebra.png
+  - title: IOC Bali
+    class: IOCCoding
+    col-width: 3
+  - title: Safari Uganda
+    class: Ugandapic
+    col-width: 4
+  - title: Green Lake Styria
+    class: GreenLake
+    col-width: 3
+  - title: Walking Path Vienna
+    class: WalkingPathVienna
+    col-width: 4
+  - title: Barcelona
+    class: GaudiBarcelona
+    col-width: 3
+  - title: Almond Blossom Mallorca
+    class: Mallorcapic
+    col-width: 4
 countries:
   - title: Indonesia
-    image: /images/Zebra.png
-  - title: South-East-Asia
-    image: /images/Uganda.png
-  - title: Africa
-    image: /images/Zebra.png
-  - title: Spain
-    image: /images/Chimp.png
-  - title: Africa
-    image: /images/Zebra.png
-  - title: Spain
-    image: /images/Chimp.png
+    image: /images/Indonesia.png
+  - title: Thailand
+    image: /images/Thailand.png
+  - title: Uganda
+    image: /images/UgandaCountry.png
+  - title: Austria
+    image: /images/Austria.png
+  - title: Czech Republic
+    image: /images/CzechRepublic.png
+  - title: Croatia
+    image: /images/Croatia.png
 ---
-
     <div class="flex-center">
-      <div class="h1-background">
+      <div>
         <h1>Thebackpackway</h1>
         <h2>- Subtitle</h2>
       </div>
@@ -34,7 +45,7 @@ countries:
 
   <section class="grid-spaceBetween posts padd-sec">
     {% for post in page.posts %}
-    <div class="post-background col-3">
+    <div class="post-background {{ post.class }} col-{{ post.col-width }}">
       <h2>
         <a href="/...">{{ post.title }}</a>
       </h2>
@@ -42,18 +53,22 @@ countries:
     {% endfor %}
   </section>
 
-  <section class=" countries">
+  <section class="countries">
     <h2>Countries</h2>
     <div class="grid">
       {% for country in page.countries %}
-      <div class="country-background col-2">
-        <h3>{{ country.title }}</h3>
+      <div class="country-background col-2" style="background-image:url('{{ country.image }}')">
+        <h3>
+          <a href="/...">{{ country.title }}</a>
+        </h3>
       </div>
       {% endfor %}
     </div>
   </section>
 
-  <section class="map">
-    <!-- Map with hover and country names with href-->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1010294.3589646351!2d114.51106815010631!3d-8.45433865210443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd22f7520fca7d3%3A0x2872b62cc456cd84!2sBali!5e0!3m2!1sde!2sid!4v1494295239095" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-  </section>
+    <section class="map">
+      <!-- Map with hover and country names with href-->
+      <div>
+        <img src="/images/Map.png"
+      </div>
+    </section>

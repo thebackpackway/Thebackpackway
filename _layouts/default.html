@@ -13,42 +13,38 @@
 {% if page.banner == true %}
 <section class="banner {{page.bannerClass}}">
 {% endif %}
-  <header class="grid-spaceBetween">
+  <header class="grid-spaceBetween-middle">
     <div>
-      <a href="thebackpackway.com"><img class="col-4" src="/images/TBW_favicon.png"></a>
+      <a href="http://127.0.0.1:4000/"><img class="col-4" src="/images/TBW_favicon.png"></a>
     </div>
     <nav class="col-4">
       <span></span>
       <a href="/About">About</a>
       <span></span>
-      <a href="/Destinations">Destinations</a>
+      <a href="/Destinations">Posts</a>
       <span></span>
-      <a href="/Travel-Tips">Travel Tips</a>
+      <a href="/Travel-Tips">Countries</a>
       <span></span>
-      <a href="/Categories">Categories</a>
+      <a href="/Categories">Travel Hacks</a>
     </nav>
     <!-- /*how do i write a search fiels?*/ -->
   </header>
 
 {{content}}
 
-  <footer class="grid">
-    <div class="col-8">
+  <footer>
       <h2>Get in touch</h2>
-      <form>
+      <div>
+        <form>
         <label for="name">Name</label>
         <input type="text" name="name" placeholder="Enter your name"></input>
         <label for="e-mail">E-Mail</label>
         <input type="text" name="e-mail" placeholder="Enter your E-Mail"></input>
         <label for="message">Message</label>
-        <textarea name="message" placeholder="Message"></textarea>
-        <input type="submit">Send</input>
-      </form>
-    </div>
-    <div class="col-4">
-      <h2>About Me</h2>
-      <p>Hello! My name is Julia.</p>
-    </div>
+        <textarea name="message" placeholder="Message" class="col-12"></textarea>
+        <input type="submit" value="Send"></input>
+        </form>
+      </div>
   </footer>
 </body>
 </html>
