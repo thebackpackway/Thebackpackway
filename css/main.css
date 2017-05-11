@@ -45,11 +45,7 @@ a{
 }
 
 
-
-
-
 /* ----- GENERAL HELPER CLASSES ----- */
-
 .flex-center{
   display:flex;
   align-items: center;
@@ -58,6 +54,21 @@ a{
 
 .padded{
   padding:5%;
+}
+
+.scale-text{
+  overflow: hidden;
+}
+
+.scale-text:hover h2, .scale-text:hover h3{
+  transform:scale(1.06);
+}
+
+/* -- H2 Countries and Posts Page--*/
+.countries .posts h2{
+  text-align: center;
+  padding-top: 6%;
+  padding-bottom: 0%;
 }
 
 /* ----- UNIVERSAL STYLES ----- */
@@ -90,13 +101,14 @@ h3, h4, h5, h6{
 
 .padd-sec{
   padding: 5% 10%;
+  padding-top: 2%;
 }
 
 section div{
   text-align: center;
 }
 
-/* ----- POST SECTION -----*/
+/* ----- HOMEPAGE - POST SECTION -----*/
 .post-background{
   min-height: 30vh;
   background-size: cover;
@@ -109,19 +121,17 @@ section div{
   margin-left: 1px;
 }
 
-/* ----- COUNTRIES SECTION -----*/
-.countries h2{
-  text-align: center;
-}
-
-.country-background{
+/* ----- HOMEPAGE - COUNTRIES SECTION -----*/
+.country-background {
   background-image: url('/images/Chimp.png');
   min-height: 25vh;
   background-size:cover;
   background-position: 50% 50%;
+  padding:5% 3%;
+  margin:1% 0%;
 }
 
-/* ----- MAP SECTION -----*/
+/* ----- HOMEPAGE - MAP SECTION -----*/
 .map{
   width:100%;
   height:100%;
@@ -155,6 +165,10 @@ background-position: 51% 15%;
 opacity: 0.95;
 }
 
+.transparent-head header{
+  background-color: rgba(255, 255, 255, 0);
+}
+
 nav{
   color: #172727;
   display: block;
@@ -175,41 +189,23 @@ nav span{
 
 }
 
-.IOCCoding{
-  background-image: url("/images/Bali.png");
-}
-
-.Ugandapic{
-  background-image: url("/images/Uganda.png");
-}
-
-.GreenLake{
-    background-image: url("/images/GreenLake.png");
-}
-
-.WalkingPathVienna{
-  background-image:url("/images/WalkingPathVienna.png");
-}
-
-.GaudiBarcelona{
-  background-image: url("/images/GaudiBarcelona.png");
-}
-
-.Mallorcapic{
-  background-image: url("/images/Mallorca.png")
-}
-
-
 footer{
   background-color: #505055;
-  padding:4vh 10%;
+  padding:0vh 15%;
   text-align: center;
+  margin-top:-5px;
 }
 
 footer h2{
   display:inline-block;
   background:none;
   color:white;
+}
+
+footer h3{
+  background-color: rgba(80, 80, 85, 0.5);
+  padding: 15px;
+  color: white;
 }
 
 form{
@@ -235,10 +231,55 @@ input[type="submit" i]{
 
 }
 
+/*footer img{
+  max-width:80%;
+  height:auto;
+  border-radius:50%;
+}*/
+
+footer p{
+  padding:10% 10%;
+  margin:15% 15%;
+  color:white;
+}
+
+.AboutFooter{
+  background-image: url("/images/AboutFooter.png");
+  background-size: cover;
+  height:17.5vw;
+  border-radius:50%;
+  max-width: 50%;
+  margin: 5px auto 30px auto;
+}
+/* ----- HOMEPAGE - BODY INDEX ------*/
+
+.IOCCoding{
+  background-image: url("/images/Bali.png");
+}
+
+.Ugandapic{
+  background-image: url("/images/Uganda.png");
+}
+
+.GreenLake{
+    background-image: url("/images/GreenLake.png");
+}
+
+.WalkingPathVienna{
+  background-image:url("/images/WalkingPathVienna.png");
+}
+
+.GaudiBarcelona{
+  background-image: url("/images/GaudiBarcelona.png");
+}
+
+.Mallorcapic{
+  background-image: url("/images/Mallorca.png")
+}
 
 /* ----- CSS for ABOUT -----*/
 /* ----- HEADER -----*/
-h1.about{
+.about{
   background-image: url("/images/About.png");
   padding-top: 20vh;
   width: 100%;
@@ -248,8 +289,6 @@ h1.about{
 }
 
 /* ----- BODY ----- */
-
-
 div.about-text-left{
   width: 20%;
   height: 20%;
@@ -276,6 +315,7 @@ div.about-text-right{
 .offsetpic2{
   position:relative;
   left:10%;
+  top:1%;
   max-width:80%;
   height:auto;
   z-index:2;
@@ -285,6 +325,7 @@ p.padded{
   border:1px solid black;
 }
 
+/* --- Quote --- */
 .quote{
   max-width: 100%;
   background-color: #5196c1;
@@ -293,6 +334,10 @@ p.padded{
 
 }
 
+.quote h3{
+  background-color: white;
+}
+/* --- End Quote --- */
 
 section.padded{
   padding-top: 5%;
@@ -303,7 +348,41 @@ section.padded{
 
 div.quote{
   font-style: italic;
+  padding: 5% 23%;
 }
+
+/* ----- CSS for COUNTRIES ------*/
+/* ----- HEADER -----*/
+.country-page h2{
+  padding:5%;
+  padding-bottom: 0;
+}
+
+/* ----- BODY -----*/
+.CountryIndonesia{
+  background-image: url("/images/Indonesia.png");
+}
+
+.CountryThailand{
+  background-image: url("/images/Thailand.png");
+}
+
+.CountryAustria{
+    background-image: url("/images/Austria.png");
+}
+
+.CountryUganda{
+  background-image:url("/images/UgandaCountry.png");
+}
+
+.CountryCroatia{
+  background-image: url("/images/Croatia.png");
+}
+
+.CountryCzech{
+  background-image: url("/images/CzechRepublic.png");
+}
+
 
 /* ----- MODULAR ELEMENTS -----*/
 

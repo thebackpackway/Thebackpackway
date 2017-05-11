@@ -2,16 +2,8 @@
 layout: default
 title: TBW
 banner: true
+banner-class: transparent-head
 posts:
-  - title: IOC Bali
-    class: IOCCoding
-    col-width: 3
-  - title: Safari Uganda
-    class: Ugandapic
-    col-width: 4
-  - title: Green Lake Styria
-    class: GreenLake
-    col-width: 3
   - title: Walking Path Vienna
     class: WalkingPathVienna
     col-width: 4
@@ -21,6 +13,15 @@ posts:
   - title: Almond Blossom Mallorca
     class: Mallorcapic
     col-width: 4
+  - title: IOC Bali
+    class: IOCCoding
+    col-width: 3
+  - title: Safari Uganda
+    class: Ugandapic
+    col-width: 5
+  - title: Green Lake Styria
+    class: GreenLake
+    col-width: 3
 countries:
   - title: Indonesia
     image: /images/Indonesia.png
@@ -35,7 +36,7 @@ countries:
   - title: Croatia
     image: /images/Croatia.png
 ---
-    <div class="flex-center">
+      <div class="flex-center">
       <div>
         <h1>Thebackpackway</h1>
         <h2>- Subtitle</h2>
@@ -43,23 +44,23 @@ countries:
     </div>
   </section>
 
-  
+
 
   <section class="grid-spaceBetween posts padd-sec">
-    {% for post in page.posts %}
-    <div class="post-background {{ post.class }} col-{{ post.col-width }}">
-      <h2>
-        <a href="/...">{{ post.title }}</a>
-      </h2>
-    </div>
-    {% endfor %}
+    <!---{% for post in page.posts limit: 6 %}-->
+    <a class='col-{{ post.col-width }}' href="/postpage.html">
+      <div class="post-background scale-text {{ post.class }}">
+        <h2>{{ post.title }}</h2>
+      </div>
+    </a>
+    <!---{% endfor %}--->
   </section>
 
   <section class="countries">
     <h2>Countries</h2>
     <div class="grid">
       {% for country in page.countries %}
-      <div class="country-background col-2" style="background-image:url('{{ country.image }}')">
+      <div class="country-background scale-text col-2" style="background-image:url('{{ country.image }}')">
         <h3>
           <a href="/...">{{ country.title }}</a>
         </h3>

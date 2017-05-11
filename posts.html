@@ -1,0 +1,43 @@
+---
+layout: default
+title: TBW
+posts:
+  - titel: IOC Bali
+    class: IOCCoding
+    col-width: 3
+  - titel: Walking Path Vienna
+    class: WalkingPathVienna
+    col-width: 5
+  - titel: Barcelona
+    class: GaudiBarcelona
+    col-width: 3
+  - titel: Safari Uganda
+    class: Ugandapic
+    col-width: 4
+  - titel: Green Lake Styria
+    class: GreenLake
+    col-width: 3
+  - titel: Almond Blossom Mallorca
+    class: Mallorcapic
+    col-width: 4
+  - titel: Barcelona
+    class: GaudiBarcelona
+    col-width: 3
+  - titel: IOC Bali
+    class: IOCCoding
+    col-width: 5
+  - titel: Green Lake Styria
+    class: GreenLake
+    col-width: 3
+---
+
+<section class="country-page posts">
+  <h2>Posts</h2>
+    <div class="grid-spaceBetween padd-sec">
+  {% for post in page.posts %}
+    <div class="country-background scale-text col-{{post.col-width}} {{post.class}}">
+      <h3><a href="/...">{{post.titel}}</a></h3>
+    </div>
+  {% endfor %}
+    </div>
+</section>

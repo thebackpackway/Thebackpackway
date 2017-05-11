@@ -1,0 +1,43 @@
+---
+layout: default
+title: TBW
+countries:
+  - titel: Indonesia
+    class: CountryIndonesia
+    col-width: 4
+  - titel: Thailand
+    class: CountryThailand
+    col-width: 3
+  - titel: Austria
+    class: CountryAustria
+    col-width: 4
+  - titel: Uganda
+    class: CountryUganda
+    col-width: 3
+  - titel: Croatia
+    class: CountryCroatia
+    col-width: 4
+  - titel: Czech Republic
+    class: CountryCzech
+    col-width: 3
+  - titel: Austria
+    class: CountryAustria
+    col-width: 4
+  - titel: Thailand
+    class: CountryThailand
+    col-width: 3
+  - titel: Indonesia
+    class: CountryIndonesia
+    col-width: 4
+---
+
+<section class="country-page countries">
+  <h2>Countries</h2>
+    <div class="grid-spaceBetween padd-sec">
+  {% for country in page.countries %}
+    <div class="country-background scale-text col-{{country.col-width}} {{country.class}}">
+      <h3><a href="/...">{{country.titel}}</a></h3>
+    </div>
+  {% endfor %}
+    </div>
+</section>
