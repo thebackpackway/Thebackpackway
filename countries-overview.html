@@ -1,6 +1,6 @@
 ---
 layout: default
-title: TBW
+title: Countries
 countries:
   - titel: Indonesia
     class: CountryIndonesia
@@ -31,13 +31,15 @@ countries:
     col-width: 4
 ---
 
-<section class="country-page countries">
+<section class="overview countries">
   <h2>Countries</h2>
     <div class="grid-spaceBetween padd-sec">
-  {% for country in page.countries %}
-    <div class="country-background scale-text col-{{country.col-width}} {{country.class}}">
-      <h3><a href="/...">{{country.titel}}</a></h3>
-    </div>
-  {% endfor %}
+      {% for country in site.countries %}
+      <a class'col-{{country.col-width}}' href="{{country.url}}">
+        <div class="country-background scale-text  {{country.class}}" style="background-image: url('{{post.country-background}}')">
+          <h3>{{country.title}}</h3>
+        </div>
+      </a>
+      {% endfor %}
     </div>
 </section>

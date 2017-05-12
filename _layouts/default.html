@@ -6,7 +6,7 @@
   <title> {{page.title}} </title>
   <link rel="shortcut icon" href=".ico">
   <link rel="shortcut icon" href="/images/TBW_favicon.png">
-  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <link href="/css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 {% if page.banner == true %}
@@ -20,9 +20,10 @@
       <span></span>
       <a href="/about">About</a>
       <span></span>
-      <a href="/posts">Posts</a>
+      <a href="/posts-overview">Posts</a>
       <span></span>
-      <a href="/countries">Countries</a>
+      <a href="/countries-overview
+      ">Countries</a>
       <span></span>
       <a href="/travel-hacks">Travel Hacks</a>
     </nav>
@@ -33,7 +34,10 @@
 
 
   <footer>
-      <div class="grid">
+      <div class="grid rel">
+        <svg class="svg rel" viewBox="0 0 100 100">
+    <polygon  class="{{page.svg-class}}" points="0,0 50,30 100,0"/>
+
         <div class="col-6">
           <h2>Get in touch</h2>
           <form>
@@ -46,6 +50,7 @@
           <input type="submit" value="Send"></input>
           </form>
         </div>
+          </svg>
         <div class="col-6">
           <h2>Hello!</h2>
           <div>

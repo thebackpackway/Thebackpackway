@@ -3,25 +3,6 @@ layout: default
 title: TBW
 banner: true
 banner-class: transparent-head
-posts:
-  - title: Walking Path Vienna
-    class: WalkingPathVienna
-    col-width: 4
-  - title: Barcelona
-    class: GaudiBarcelona
-    col-width: 3
-  - title: Almond Blossom Mallorca
-    class: Mallorcapic
-    col-width: 4
-  - title: IOC Bali
-    class: IOCCoding
-    col-width: 3
-  - title: Safari Uganda
-    class: Ugandapic
-    col-width: 5
-  - title: Green Lake Styria
-    class: GreenLake
-    col-width: 3
 countries:
   - title: Indonesia
     image: /images/Indonesia.png
@@ -44,28 +25,49 @@ countries:
     </div>
   </section>
 
-
-
   <section class="grid-spaceBetween posts padd-sec">
-    <!---{% for post in page.posts limit: 6 %}-->
-    <a class='col-{{ post.col-width }}' href="/postpage.html">
-      <div class="post-background scale-text {{ post.class }}">
+    {% for post in site.posts limit: 6 %}
+    <a class='col-6' href="{{post.url}}">
+      <div class="post-background scale-text {{ post.class }}" style="background-image: url('{{post.bannerimage}}')">
         <h2>{{ post.title }}</h2>
       </div>
     </a>
-    <!---{% endfor %}--->
+    {% endfor %}
   </section>
 
   <section class="countries">
     <h2>Countries</h2>
-    <div class="grid">
-      {% for country in page.countries %}
-      <div class="country-background scale-text col-2" style="background-image:url('{{ country.image }}')">
-        <h3>
-          <a href="/...">{{ country.title }}</a>
-        </h3>
-      </div>
-      {% endfor %}
+    <div class="grid-spaceBetween posts">
+      <a class='col-2 country-background scale-text' href=url("/indonesia.html")>
+        <div class="CountryIndonesia country-background">
+          <h3>Indonesia</h3>
+        </div>
+      </a>
+      <a class='col-2 country-background scale-text' href=url("/indonesia.html")>
+        <div class="CountryIndonesia country-background">
+          <h3>Indonesia</h3>
+        </div>
+      </a>
+      <a class='col-2 country-background scale-text' href=url("/indonesia.html")>
+        <div class="CountryIndonesia country-background">
+          <h3>Indonesia</h3>
+        </div>
+      </a>
+      <a class='col-2 country-background scale-text' href="/indonesia.html">
+        <div class="CountryIndonesia country-background">
+          <h3>Indonesia</h3>
+        </div>
+      </a>
+      <a class='col-2 country-background scale-text' href="/indonesia.html">
+        <div class="CountryIndonesia country-background">
+          <h3>Indonesia</h3>
+        </div>
+      </a>
+      <a class='col-2 country-background scale-text' href="/indonesia.html">
+        <div class="CountryIndonesia country-background">
+          <h3>Indonesia</h3>
+        </div>
+      </a>
     </div>
   </section>
 

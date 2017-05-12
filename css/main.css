@@ -83,7 +83,7 @@ h1, h2{
   font-family: 'Indie Flower', cursive;
   text-align: center;
   font-size:40px;
-  padding: 2%;
+  padding: 2% 10%;
   background-color: rgba(255, 255, 255, .6);
 }
 
@@ -116,19 +116,52 @@ section div{
   margin-bottom: 5%;
 }
 
-.posts .post-background:nth-child(3n+2){
-  margin-right:1px;
-  margin-left: 1px;
+.posts a:nth-child(1) {
+  max-width: 33.33%!important;
+}
+.posts a:nth-child(2) {
+  max-width: 25%!important;
+}
+.posts a:nth-child(3) {
+  max-width: 33.33%!important;
+}
+.posts a:nth-child(4) {
+  max-width: 25%!important;
+}
+.posts a:nth-child(5) {
+  max-width: 41.66%!important;
+}
+.posts a:nth-child(6) {
+  max-width: 25%!important;
 }
 
 /* ----- HOMEPAGE - COUNTRIES SECTION -----*/
-.country-background {
+/*.country-background {
   background-image: url('/images/Chimp.png');
   min-height: 25vh;
   background-size:cover;
   background-position: 50% 50%;
   padding:5% 3%;
   margin:1% 0%;
+}*/
+
+.countries a:nth-child(1) {
+  max-width: 33.33%!important;
+}
+.countries a:nth-child(2) {
+  max-width: 25%!important;
+}
+.countries a:nth-child(3) {
+  max-width: 33.33%!important;
+}
+.countries a:nth-child(4) {
+  max-width: 25%!important;
+}
+.countries a:nth-child(5) {
+  max-width: 41.66%!important;
+}
+.countries a:nth-child(6) {
+  max-width: 25%!important;
 }
 
 /* ----- HOMEPAGE - MAP SECTION -----*/
@@ -136,7 +169,6 @@ section div{
   width:100%;
   height:100%;
   display:block;
-  border: 2px solid grey;
 }
 
 .map img{
@@ -193,7 +225,7 @@ footer{
   background-color: #505055;
   padding:0vh 15%;
   text-align: center;
-  margin-top:-5px;
+  margin-top:-4px;
 }
 
 footer h2{
@@ -207,6 +239,33 @@ footer h3{
   padding: 15px;
   color: white;
 }
+
+
+/* --- SVG --- */
+div{
+  position:relative;
+}
+.rel{
+  position:relative;
+}
+svg{
+  position:absolute;
+  top:0;
+  right:0;
+  width:100%;
+}
+.blue-triangle{
+  fill:#5196c1;
+  stroke-width:0;
+}
+polygon{
+  fill:white;
+  stroke:white;
+  stroke-width:0.1;
+}
+
+/* --- End SVG --- */
+
 
 form{
   width:100%;
@@ -279,13 +338,13 @@ footer p{
 
 /* ----- CSS for ABOUT -----*/
 /* ----- HEADER -----*/
-.about{
+.about {
   background-image: url("/images/About.png");
-  padding-top: 20vh;
+  padding-top: 10vh;
   width: 100%;
   min-height:60vh;
   background-size: cover;
-  background-position: 50% 55%;
+  background-position: 50% 68%;
 }
 
 /* ----- BODY ----- */
@@ -353,12 +412,21 @@ div.quote{
 
 /* ----- CSS for COUNTRIES ------*/
 /* ----- HEADER -----*/
-.country-page h2{
+.overview h2{
   padding:5%;
   padding-bottom: 0;
 }
 
 /* ----- BODY -----*/
+.country-background h3{
+  font-family: 'Indie Flower', cursive;
+  min-height: 25vh;
+  background-size:cover;
+  background-position: 50% 50%;
+  padding:5% 3%;
+  margin:1% 0%;
+}
+
 .CountryIndonesia{
   background-image: url("/images/Indonesia.png");
 }
@@ -383,6 +451,48 @@ div.quote{
   background-image: url("/images/CzechRepublic.png");
 }
 
+/* ----- CSS for POSTPAGE ----- */
+section.postpage{
+  margin: 0%;
+  padding:7%;
+}
+
+/* -- Banner -- */
+.post-banner {
+  /*background-image: url("/images/Bali.png");*/
+  padding-top: 0vh;
+  width: 100%;
+  min-height:60vh;
+  background-size: cover;
+  background-position: 50% 55%;
+}
+
+.postpage h2{
+  font-size: 30px
+}
+
+.postpage p{
+  margin:40px;
+  padding-top:0;
+}
+
+.postpage img{
+  padding:4px;
+}
+
+.imagegallery{
+  background-size: cover;
+  min-height: 26.94vw;
+  margin: 1vw 1vw 1vw 1vw;
+  background-position: center;
+  max-width: 32% !important;
+}
+
+
+
+/*.postpage div.sidebar{
+  border:1px solid black;
+}*/
 
 /* ----- MODULAR ELEMENTS -----*/
 

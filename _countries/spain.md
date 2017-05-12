@@ -1,0 +1,3 @@
+---
+layout: countrypage
+title: Spain
