@@ -1,0 +1,19 @@
+---
+layout: default
+title: Croatia
+categories: [Croatia]
+country-background: /images/Croatia.png
+---
+
+<section class="overview posts">
+  <h2>Croatia</h2>
+  <div class="grid-spaceBetween posts padd-sec">
+    {% for post in site.categories.Croatia %}
+    <a class='col-6' href="{{post.url}}">
+      <div class="post-background scale-text {{ post.class }}" style="background-image: url('{{post.bannerimage}}')">
+        <h2>{{post.title}}</h2>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>

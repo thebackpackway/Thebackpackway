@@ -1,0 +1,19 @@
+---
+layout: default
+title: Spain
+categories: [Spain]
+country-background: /images/GaudiBarcelona.png
+---
+
+<section class="overview posts">
+  <h2>Spain</h2>
+  <div class="grid-spaceBetween posts padd-sec">
+    {% for post in site.categories.Indonesia %}
+    <a class='col-6' href="{{post.url}}">
+      <div class="post-background scale-text {{ post.class }}" style="background-image: url('{{post.bannerimage}}')">
+        <h2>{{post.title}}</h2>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
