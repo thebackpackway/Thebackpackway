@@ -6,13 +6,22 @@ $(".quote").mouseenter(function(){
   });
   });
 
-$(function() {
-    $(window).on("scroll", function() {
-        if($(window).scrollTop() > 50) {
-            $(".index-header").addClass("active");
-        } else {
-            //remove the background property so it comes transparent again (defined in your css)
-           $(".index-header").removeClass("active");
-        }
-    });
+//$(function() {
+//    $(window).on("scroll", function() {
+//        if($(window).scrollTop() > 50) {
+//            $(".index-header").addClass("active");
+//        } else {
+//            //remove the background property so it comes transparent again (defined in your css)
+//           $(".index-header").removeClass("active");
+//        }
+//    });
+//});
+
+$(document).ready(function(){
+  $('.toggle-nav').click(function(e){
+    $(this).toggleClass('active');
+    $('.menu ul').toggleClass('active');
+
+    e.preventDefault();
+  });
 });

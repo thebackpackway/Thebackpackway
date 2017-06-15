@@ -41,8 +41,12 @@ a{
 }
 
 [class*=col-], [class^=col]{
-  padding:0;
+  box-sizing: border-box;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0 0.5rem -1rem;
 }
+
 
 
 /* ----- GENERAL HELPER CLASSES ----- */
@@ -73,30 +77,40 @@ a{
 
 /* ----- UNIVERSAL STYLES ----- */
 
-/*body{
-  font-family: 'Roboto', sans-serif;
-  font-size: 21px;
-  color: #172727;
-}*/
-
 h1, h2{
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Lora', serif;
   text-align: center;
-  font-size:350%;
-  padding: 2% 10%;
+  font-size:300%;
+  padding: 2% 13%;
   background-color: rgba(255, 255, 255, .6);
+  letter-spacing: 3px;
 }
 
 h1{
-  font-size: 60px;
   text-transform: uppercase;
+  padding-top:2%;
+}
+
+h2{
+  font-size: 220%;
 }
 
 h3, h4, h5, h6{
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-family: 'montserrat', sans-serif;
+  font-size: 200%;
   background-color: rgba(255, 255, 255, .6);
-  padding:15px;
+  padding:5px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 860px) {
+  h1, h2{
+    font-size: 150%;
+    padding: 2% 10%;
+    padding-top: 4%;
+  }
 }
 
 .padd-sec{
@@ -116,6 +130,15 @@ section div{
   margin-bottom: 5%;
 }
 
+@media screen and (max-width: 860px) {
+  .post-background{
+    min-height: 23vh;
+    margin: 2% 0%;
+    font-size: 100%;
+  }
+}
+
+/*
 .posts a:nth-child(1) {
   max-width: 33.33%!important;
 }
@@ -134,6 +157,9 @@ section div{
 .posts a:nth-child(6) {
   max-width: 25%!important;
 }
+*/
+
+
 
 /* ----- HOMEPAGE - COUNTRIES SECTION -----*/
 /*.country-background {
@@ -145,7 +171,7 @@ section div{
   margin:1% 0%;
 }*/
 
-.countries a:nth-child(1) {
+/*.countries a:nth-child(1) {
   max-width: 33.33%!important;
 }
 .countries a:nth-child(2) {
@@ -162,18 +188,20 @@ section div{
 }
 .countries a:nth-child(6) {
   max-width: 25%!important;
-}
+}*/
 
+/*
+@media (max-width: 360px){
+  .country-background{
+    min-height: 15vh;
+      background-size: cover;
+      background-position: 50% 50%;
+      margin-bottom: 5%;
+      margin: 1% 0%;
+  }
+}*/
 /* ----- HOMEPAGE - MAP SECTION -----*/
-.map{
-  width:100%;
-  height:100%;
-  display:block;
-}
-
-.map img{
-  max-width: 85%;
-}
+/* -- Stylings in HMTML -- */
 
 /* ----- HEADER & FOOTER ----- */
 
@@ -185,53 +213,252 @@ section div{
   background-color: white;
   /*border-bottom: 1.5px solid black;*/
   box-shadow: 0px 1px 5px rgba(190, 190, 190, 0.46);
-  z-index: 5000;
+  z-index: 10000;
 }
+
 .index-header{
-  background-color: transparent;
+  background-color: white;
+}
+
+.navigation{
+  margin:auto;
+  letter-spacing: 3px;
 }
 
 .banner{
 background-image: url("/images/Ugandascene.png");
-padding-top: 20vh;
-min-height: 60vh;
+/*padding-top: 10vh;
+min-height: 55vh;
 background-size: cover;
-background-position: 51% 15%;
+background-position: 51% 29%;
 opacity: 0.95;
 position:relative;
-z-index:5000;
+z-index:1000;
+margin:0 144px;*/
+
+padding-top: 10vh;
+margin: 6%;
+min-height: 55vh;
+background-size: cover;
+background-position: 50% 52%;
 }
 
-/*.header .active{
-  background-color: rgba(255, 255, 255, 0);
-}*/
+@media screen and (max-width: 860px) {
+  .banner{
+    padding: 4vh;
+    padding-top: 10vh;
+    min-height: 36vh;
+    background-size: cover;
+    background-position: 51% 15%;
+    opacity: 0.95;
+    position:relative;
+    z-index:5000;
+    margin:0 22px;
+  }
+}
+
 
 .active { background-color: #fff}
 
 
-nav{
-  color: #172727;
-  display: block;
-  text-align: right;
-  font-family: 'Roboto', sans-serif;
-
+/* --- alternative menü darstellung --- */
+.toggle-nav{
+  display:none;
 }
 
-nav a{
-  padding: 4%;
-  align-items: flex-end;
-  justify-content: flex-end;
-  font-size:20px;
+@media screen and (min-width:360px){
+  .menu {
+    width:100%;
+    padding:10px 18px;
+    /*box-shadow:0px 1px 1px rgba(0,0,0,0.15);*/
+    border-radius:3px;
+    /*background:#303030;*/
+  }
 }
 
-nav span{
-  border-left: 1px solid #172727;
-
+.menu ul{
+  display:inline-block;
 }
+
+.menu li{
+  margin:0px 80px 0px 0px;
+  float:left;
+  list-style:none;
+  font-size:22px;
+}
+
+.menu li:last-child{
+  margin-right:0px;
+}
+
+.menu a{
+  text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+  color:#172727;
+  transition:color linear 0.15s;
+}
+
+.menu a:hover, .menu .current-item a{
+  text-decoration:none;
+  color:#66a992;
+}
+
+nav li{
+  list-style: none;
+  display:inline;
+}
+
+nav li a:active{
+  color:green;
+}
+
+nav ul{
+  margin:0;
+}
+
+[class*=grid]>[class*=col-4] {
+  flex-basis: 33.33333333%;
+  max-width: 27.333333%;
+}
+
+
+/*.search-form{
+  float:right;
+  display:inline-block;
+}
+
+.search-form input{
+  width:200px;
+  height:30px;
+  padding:0px 8px;
+  float:left;
+  border-radius:2px 0px 0px 2px;
+  font-size:13px;
+}
+
+.search-form button {
+    height:30px;
+    padding:0px 7px;
+    float:right;
+    border-radius:0px 2px 2px 0px;
+    background:#66a992;
+    font-size:13px;
+    font-weight:600;
+    text-shadow:0px 1px 0px rgba(0,0,0,0.3);
+    color:#fff;
+}*/
+
+@media screen and (max-width: 1150px) {
+    .wrap {
+        width:90%;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .search-form input {
+        width:120px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .menu {
+        position:relative;
+        display:inline-block;
+    }
+
+    .menu ul.active-nav {
+        display:none;
+    }
+
+    .menu ul {
+        width:100%;
+        position:absolute;
+        top:120%;
+        left:0px;
+        padding:10px 18px;
+        box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+        border-radius:3px;
+        background:#303030;
+    }
+
+    .menu ul:after {
+        width:0px;
+        height:0px;
+        position:absolute;
+        top:0%;
+        left:22px;
+        content:'';
+        transform:translate(0%, -100%);
+        border-left:7px solid transparent;
+        border-right:7px solid transparent;
+        border-bottom:7px solid #303030;
+    }
+
+    .menu li {
+        margin:5px 0px 5px 0px;
+        float:none;
+        display:block;
+    }
+
+    .menu a {
+        display:block;
+        color:#172727;
+    }
+
+    .toggle-nav {
+      padding: 0px 10px;
+      margin: 0;
+      float: right;
+      display: inline-block;
+      border-radius: 3px;
+      text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+      color: #777;
+      font-size: 30px;
+      transition: color linear 0.15s;
+      }
+
+    .toggle-nav:hover, .toggle-nav.active-nav {
+        text-decoration:none;
+        color:#66a992;
+    }
+
+    .search-form {
+        margin:12px 0px 0px 20px;
+        float:left;
+    }
+
+    .search-form input {
+        box-shadow:-1px 1px 2px rgba(0,0,0,0.1);
+    }
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  font-size: xx-large !important;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 5px;
+  border-radius:5%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-instagram {
+  color: white;
+}
+
+.fa-envelope {
+  color: white;
+}
+
+/* --- ende --- */
 
 footer{
-  background-color: #505055;
-  padding:0vh 15%;
+  background-color: #a5a5a7;
+  padding:0vh 10%;
   text-align: center;
   margin-top:-4px;
 }
@@ -243,9 +470,26 @@ footer h2{
 }
 
 footer h3{
-  background-color: rgba(80, 80, 85, 0.5);
-  padding: 15px;
+  background-color: rgba(212, 212, 214, 0.51);
+  padding: 6%;
+  margin:7%;
   color: white;
+  font-size:140%;
+}
+
+@media screen and (max-width: 860px) {
+  footer h3{
+    background-color: rgba(212, 212, 214, 0.51);
+    margin: 7px;
+    padding: 5px;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  footer{
+  padding:0;
+  }
 }
 
 /*--- only padding on footer with direct child of div---*/
@@ -270,6 +514,14 @@ svg{
   fill:#5196c1;
   stroke-width:0;
 }
+
+@media screen and (max-width: 860px) {
+.svg-mobile{
+  display:none;
+  }
+}
+
+
 polygon{
   fill:white;
   stroke:white;
@@ -278,7 +530,6 @@ polygon{
 
 /* --- End SVG --- */
 
-
 form{
   width:100%;
   padding:12px 20px;
@@ -286,7 +537,6 @@ form{
   box-sizing:border-box;
   color: white;
   text-align:center;
-
 }
 
 input, textarea{
@@ -299,14 +549,7 @@ input[type="submit" i]{
   width:25%;
   margin:2%;
   background-color: white;
-
 }
-
-/*footer img{
-  max-width:80%;
-  height:auto;
-  border-radius:50%;
-}*/
 
 footer p{
   padding:10% 10%;
@@ -319,10 +562,36 @@ footer p{
   background-size: cover;
   height:17.5vw;
   border-radius:50%;
-  max-width: 50%;
+  max-width: 47%;
   margin: 5px auto 30px auto;
 }
-/* ----- HOMEPAGE - BODY INDEX ------*/
+
+@media screen and (max-width: 860px) {
+  .AboutFooter{
+    height: 34.5vw;
+    border-radius: 50%;
+    max-width: 74%;
+  }
+  .AboutFooter h3{
+    font-size:90%;
+  }
+  .footer h2{
+    font-size: 200%;
+  }
+}
+
+/* ----- HOMEPAGE - BODY INDEX ------ */
+/* ----- Posts Section ----- */
+.post-background h3 {
+    font-family: 'Indie Flower', cursive;
+  }
+
+  [class*=col-], [class^=col] {
+    box-sizing: border-box;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    padding: 0;
+}
 
 .IOCCoding{
   background-image: url("/images/Bali.png");
@@ -353,10 +622,24 @@ footer p{
 .about {
   background-image: url("/images/About.png");
   padding-top: 10vh;
-  width: 100%;
-  min-height:60vh;
+  margin: 6% 6% 0 6%;
+  min-height: 55vh;
   background-size: cover;
   background-position: 50% 68%;
+}
+
+@media screen and (max-width: 860px) {
+  .about{
+    padding: 4vh;
+    padding-top: 10vh;
+    min-height: 36vh;
+    background-size: cover;
+    background-position: 51% -90%;
+    opacity: 0.95;
+    position:relative;
+    z-index:5000;
+    margin:0 22px;
+  }
 }
 
 /* ----- BODY ----- */
@@ -392,8 +675,30 @@ div.about-text-right{
   z-index:2;
 }
 
+@media screen and (max-width: 860px) {
+  section.padded{
+    padding:5% !important;
+  }
+
+  div.about-text-left{
+    padding-left: 0;
+  }
+
+  .offsetpic1{
+    top:15%;
+    right:10%;
+  }
+
+  div.about-text-right{
+    padding-left: 0;
+    padding-right:0;
+    padding-top:12%;
+  }
+}
+
 p.padded{
   border:1px solid black;
+  text-align:justify;
 }
 
 /* --- Quote --- */
@@ -401,12 +706,13 @@ p.padded{
   max-width: 100%;
   background-color: #5196c1;
   margin:0%;
-  padding:5%;
+  padding:6% 9% !important;
 
 }
 
 .quote h3{
   background-color: white;
+  font-size: 150%;
 }
 /* --- End Quote --- */
 
@@ -424,6 +730,10 @@ div.quote{
 
 /* ----- CSS for COUNTRIES ------*/
 /* ----- HEADER -----*/
+.overview h1{
+font-size:270%;
+}
+
 .overview h2{
   padding:5%;
   padding-bottom: 0;
@@ -431,11 +741,11 @@ div.quote{
 
 /* ----- BODY -----*/
 .country-background{
-  min-height: 25vh;
-  background-size:cover;
+  min-height: 15vh;
+  background-size: cover;
   background-position: 50% 50%;
-  margin-bottom:5%;
-  margin:1% 0%;
+  margin-bottom: 5%;
+  margin: -0.5% 0%;
 }
 
 .country-background h3{
@@ -465,6 +775,18 @@ div.quote{
 .CountryCzech{
   background-image: url("/images/CzechRepublic.png");
 }
+/* ----- CSS MAP ----- */
+
+@media screen and (max-width: 860px) {
+  .integrated-map{
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+
 
 /* ----- CSS for POSTPAGE ----- */
 section.postpage{
@@ -475,20 +797,43 @@ section.postpage{
 /* -- Banner -- */
 .post-banner {
   /*background-image: url("/images/Bali.png");*/
-  padding-top: 0vh;
+  padding-top: 10vh;
   width: 100%;
   min-height:60vh;
   background-size: cover;
   background-position: 50% 55%;
+
+}
+
+@media screen and (max-width: 860px) {
+  .post-banner{
+    padding-top: 5vh;
+    min-height: 40vh;
+  }
 }
 
 .postpage h2{
   font-size: 30px
 }
 
+@media screen and (max-width: 860px) {
+  .postpage h2 {
+    font-size: 20px;
+  }
+}
+
 .postpage p{
   margin:40px;
   padding-top:0;
+  text-align: justify;
+}
+
+@media screen and (max-width: 860px) {
+  .postpage p{
+    margin: 10px 0;
+    text-align: justify;
+    padding-top: 0;
+  }
 }
 
 .postpage img{
@@ -504,7 +849,6 @@ section.postpage{
 }
 
 
-
 /*.postpage div.sidebar{
   border:1px solid black;
 }*/
@@ -516,112 +860,24 @@ section.postpage{
 
 /* index*/
 
+
 /* --- RESPONSIVE STYLES ---*/
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-/* Styles */
-}
 
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-/* Styles */
-}
+/*
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
 
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-/* Styles */
-}
+  .header{
+    padding: 1%;
+    position:fixed;
+    width: 77%;
+    top: 0;
+    background-color: white;
+    /*border-bottom: 1.5px solid black;*/
+/*    box-shadow: 0px 1px 5px rgba(190, 190, 190, 0.46);
+    z-index: 5000;
+  }*/
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-/* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-/* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-/* Styles */
-}
-/**********
-iPad 3
-**********/
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
-/* Styles */
-}
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-/* Styles */
-}
-/* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
-/* Styles */
-}
-
-/* Large screens ----------- */
-@media only screen  and (min-width : 1824px) {
-/* Styles */
-}
-
-/* iPhone 4 ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
-/* Styles */
-}
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-/* Styles */
-}
-
-/* iPhone 5 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-}
-
-/* iPhone 6 ----------- */
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-}
-
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-}
-
-/* iPhone 6+ ----------- */
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-}
-
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-}
-
-/* Samsung Galaxy S3 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-}
-
-/* Samsung Galaxy S4 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-/* Styles */
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-/* Styles */
-}
-
-/* Samsung Galaxy S5 ----------- */
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
   nav{
     color: #172727;
     display: block;
@@ -640,35 +896,19 @@ iPad 3
     border-left: 1px solid #172727;
   }
 
-  .banner{
+/*  .banner{
     display:block;
     width:100%auto;
     margin:0;
   }
 
-  .banner{
-  background-image: url("/images/Ugandascene.png");
-  padding-top: 5vh;
-  min-height: 28vh;
-  background-size: cover;
-  background-position: 51% 15%;
-  opacity: 0.95;
-  position:relative;
-  z-index:5000;
-  }
-
-  h1, h2{
+/*  h1, h2{
     font-family: 'Indie Flower', cursive;
     text-align: center;
-    font-size:100%;
+    font-size:50%;
     padding: 2% 10%;
     background-color: rgba(255, 255, 255, .6);
   }
-/* Styles */
+
 }
-
-
-
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
 /* Styles */
-}

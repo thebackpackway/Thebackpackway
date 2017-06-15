@@ -3,47 +3,65 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora|Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.3.1/gridlex.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title> {{page.title}} </title>
   <link rel="shortcut icon" href=".ico">
   <link rel="shortcut icon" href="/images/TBW_favicon.png">
   <link href="/css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-{% if page.banner == true %}
+<!---{% if page.banner == true %}
 <section class="banner {{page.banner-class}}">
-{% endif %}
+{% endif %}--->
+<section>
   <header class="header {{page.header-class}} grid-spaceBetween-middle">
-    <div>
-      <a href="/index.html"><img class="col-4" src="/images/TBW_favicon.png"></a>
+    <div class="navigation">
+      <nav class="col-4 menu">
+        <ul class="active-nav">
+          <li class="current-item">
+            <a href="/index.html">Home</a>
+          </li>
+          <li>
+            <a href="/about.html">About</a>
+          </li>
+          <li>
+            <a href="/austria.html">Austria</a>
+          </li>
+          <li>
+            <a href="/posts-overview.html">& the World</a>
+          </li>
+          <li>
+            <a href="countries-overview.html">Sustainability</a>
+          </li>
+        </ul>
+        <a class="toggle-nav" href="#">&#9776;</a>
+      </nav>
     </div>
-    <nav class="col-4">
-      <span></span>
-      <a href="/about">About</a>
-      <span></span>
-      <a href="/posts-overview">Posts</a>
-      <span></span>
-      <a href="/countries-overview
-      ">Countries</a>
-      <span></span>
-      <a href="/travel-hacks">Travel Hacks</a>
-    </nav>
-    <!-- /*how do i write a search fiels?*/ -->
+
+
+    <!-- /*how do i write a search field?*/ -->
   </header>
 
 
 {{content}}
 
 
-  <footer>
+  <footer class="footer">
       <div class="grid rel">
-        <svg class="svg" viewBox="0 0 100 5">
+        <svg class="svg svg-mobile" viewBox="0 0 100 5">
           <polygon class="{{page.svg-class}}" points="40,0 50,5 60,0"></polygon>
         </svg>
 
         <div class="col-6">
           <h2>Get in touch</h2>
-          <form>
+          <div>
+            <a href="#" class="fa fa-envelope"></a>
+            <a href="#" class="fa fa-instagram"></a>
+          </div>
+          <!---<form>
           <label for="name">Name</label>
           <input type="text" name="name" placeholder="Enter your name"></input>
           <label for="e-mail">E-Mail</label>
@@ -51,7 +69,7 @@
           <label for="message">Message</label>
           <textarea name="message" placeholder="Message" class="col-12"></textarea>
           <input type="submit" value="Send"></input>
-          </form>
+        </form>--->
         </div>
           </svg>
         <div class="col-6">
@@ -59,7 +77,7 @@
           <div>
             <a href="/about.html">
               <div class="AboutFooter flex-center">
-                <h3>Learn more about me. ;)</h3>
+                <h3>Learn more about me.</h3>
               </div>
             </a>
           </div>
