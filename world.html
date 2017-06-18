@@ -1,0 +1,19 @@
+---
+layout: default
+title: Posts
+categories: [World]
+
+---
+
+<section class="overview">
+  <h1>traveling around the world</h1>
+  <div class="grid-spaceBetween flex-grid posts padd-sec">
+    {% for post in site.posts limit: 6 %}
+    <a class='col-4_sm-12' href="{{post.url}}">
+      <div class="post-background scale-text {{ post.class }}" style="background-image: url('{{post.bannerimage}}')">
+        <h2>{{ post.title }}</h2>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>

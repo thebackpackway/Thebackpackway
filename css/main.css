@@ -68,54 +68,106 @@ a{
   transform:scale(1.06);
 }
 
-/* -- H2 Countries and Posts Page--*/
-.countries .posts h2{
+/* -- H2 Category Pages--*/
+.sustainability h2{
+  padding: 3% 13%;
+}
+
+.sustainability .posts h2{
   text-align: center;
   padding-top: 6%;
   padding-bottom: 0%;
+}
+.integrated-map h2{
+  padding: 1% 13% 6% 13%;
+}
+
+.sustainability .posts{
+  margin: 6% 6% 0 6%;
+}
+
+@media screen and (max-width: 860px) {
+  .sustainability p {
+    padding:17%;
+  }
 }
 
 /* ----- UNIVERSAL STYLES ----- */
 
 h1, h2{
-  font-family: 'Lora', serif;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   font-size:300%;
-  padding: 2% 13%;
+  font-weight: lighter;
+  padding: 3% 13%;
   background-color: rgba(255, 255, 255, .6);
   letter-spacing: 3px;
+}
+
+.banner h2{
+  font-family: 'Playfair Display', serif;
+  white-space: nowrap;
 }
 
 h1{
   text-transform: uppercase;
-  padding-top:2%;
+}
+
+.overview h1{
+  padding-top:7%;
 }
 
 h2{
-  font-size: 220%;
+  font-size: 270%;
 }
 
 h3, h4, h5, h6{
-  font-family: 'montserrat', sans-serif;
-  font-size: 200%;
+  font-family: 'Playfair Display', serif;
+  font-size: 180%;
   background-color: rgba(255, 255, 255, .6);
   padding:5px;
-  text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: normal;
 }
 
+p {
+  font-size: 120%;
+  font-family: 'Playfair Display', serif;
+}
+
+.overview h1{
+font-size:270%;
+}
+
+.overview h2{
+  padding:5%;
+  padding-bottom: 0;
+}
+
 @media screen and (max-width: 860px) {
   h1, h2{
-    font-size: 150%;
-    padding: 2% 10%;
-    padding-top: 4%;
+    font-size: 155%;
+    padding: 3% 3%;
+  }
+  .banner h2{
+    font-family: 'Playfair Display', serif;
+    white-space: normal;
+  }
+  .overview h1{
+    padding-top:17%;
+    font-size:200%;
   }
 }
 
 .padd-sec{
-  padding: 5% 10%;
-  padding-top: 2%;
+  padding: 0 0 3% 15%;
+  padding-top: 1%;
+}
+
+@media screen and (max-width: 860px) {
+  .padd-sec{
+    padding-top: 0;
+  }
 }
 
 section div{
@@ -127,79 +179,17 @@ section div{
   min-height: 30vh;
   background-size: cover;
   background-position: 10% 58%;
-  margin-bottom: 5%;
+  margin: 5%;
 }
 
 @media screen and (max-width: 860px) {
   .post-background{
-    min-height: 23vh;
-    margin: 2% 0%;
+    min-height: 27vh;
+    margin: 7% 0%;
     font-size: 100%;
   }
 }
 
-/*
-.posts a:nth-child(1) {
-  max-width: 33.33%!important;
-}
-.posts a:nth-child(2) {
-  max-width: 25%!important;
-}
-.posts a:nth-child(3) {
-  max-width: 33.33%!important;
-}
-.posts a:nth-child(4) {
-  max-width: 25%!important;
-}
-.posts a:nth-child(5) {
-  max-width: 41.66%!important;
-}
-.posts a:nth-child(6) {
-  max-width: 25%!important;
-}
-*/
-
-
-
-/* ----- HOMEPAGE - COUNTRIES SECTION -----*/
-/*.country-background {
-  background-image: url('/images/Chimp.png');
-  min-height: 25vh;
-  background-size:cover;
-  background-position: 50% 50%;
-  padding:5% 3%;
-  margin:1% 0%;
-}*/
-
-/*.countries a:nth-child(1) {
-  max-width: 33.33%!important;
-}
-.countries a:nth-child(2) {
-  max-width: 25%!important;
-}
-.countries a:nth-child(3) {
-  max-width: 33.33%!important;
-}
-.countries a:nth-child(4) {
-  max-width: 25%!important;
-}
-.countries a:nth-child(5) {
-  max-width: 41.66%!important;
-}
-.countries a:nth-child(6) {
-  max-width: 25%!important;
-}*/
-
-/*
-@media (max-width: 360px){
-  .country-background{
-    min-height: 15vh;
-      background-size: cover;
-      background-position: 50% 50%;
-      margin-bottom: 5%;
-      margin: 1% 0%;
-  }
-}*/
 /* ----- HOMEPAGE - MAP SECTION -----*/
 /* -- Stylings in HMTML -- */
 
@@ -227,17 +217,7 @@ section div{
 
 .banner{
 background-image: url("/images/Ugandascene.png");
-/*padding-top: 10vh;
-min-height: 55vh;
-background-size: cover;
-background-position: 51% 29%;
-opacity: 0.95;
-position:relative;
-z-index:1000;
-margin:0 144px;*/
-
-padding-top: 10vh;
-margin: 6%;
+margin: 6% 6% 2% 6%;
 min-height: 55vh;
 background-size: cover;
 background-position: 50% 52%;
@@ -257,9 +237,9 @@ background-position: 50% 52%;
   }
 }
 
-
-.active { background-color: #fff}
-
+.active {
+  background-color: #fff;
+}
 
 /* --- alternative menü darstellung --- */
 .toggle-nav{
@@ -319,33 +299,6 @@ nav ul{
   flex-basis: 33.33333333%;
   max-width: 27.333333%;
 }
-
-
-/*.search-form{
-  float:right;
-  display:inline-block;
-}
-
-.search-form input{
-  width:200px;
-  height:30px;
-  padding:0px 8px;
-  float:left;
-  border-radius:2px 0px 0px 2px;
-  font-size:13px;
-}
-
-.search-form button {
-    height:30px;
-    padding:0px 7px;
-    float:right;
-    border-radius:0px 2px 2px 0px;
-    background:#66a992;
-    font-size:13px;
-    font-weight:600;
-    text-shadow:0px 1px 0px rgba(0,0,0,0.3);
-    color:#fff;
-}*/
 
 @media screen and (max-width: 1150px) {
     .wrap {
@@ -477,6 +430,24 @@ footer h3{
   font-size:140%;
 }
 
+.getintouch{
+  margin:0;
+}
+
+.getintouch p{
+  text-align: justify;
+}
+
+@media screen and (max-width: 860px) {
+  .getintouch p{
+    display:none;
+    margin:1% 0 0 0;
+  }
+  .fa{
+    margin: 20% 10% 0% 0%;
+  }
+}
+
 @media screen and (max-width: 860px) {
   footer h3{
     background-color: rgba(212, 212, 214, 0.51);
@@ -521,7 +492,6 @@ svg{
   }
 }
 
-
 polygon{
   fill:white;
   stroke:white;
@@ -552,8 +522,8 @@ input[type="submit" i]{
 }
 
 footer p{
-  padding:10% 10%;
-  margin:15% 15%;
+  padding: 4% 0 0% 0;
+  margin: 13% 6% 0% 10%;
   color:white;
 }
 
@@ -580,17 +550,29 @@ footer p{
   }
 }
 
+.copyright{
+  margin:1%;
+  text-align: center;
+}
+
+@media screen and (max-width: 860px){
+  .copyright{
+    font-size: 80%;
+  }
+}
+
 /* ----- HOMEPAGE - BODY INDEX ------ */
 /* ----- Posts Section ----- */
-.post-background h3 {
-    font-family: 'Indie Flower', cursive;
-  }
 
-  [class*=col-], [class^=col] {
-    box-sizing: border-box;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    padding: 0;
+[class*=col-], [class^=col] {
+  box-sizing: border-box;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0;
+}
+
+.posts{
+  opacity: 0.7;
 }
 
 .IOCCoding{
@@ -617,11 +599,27 @@ footer p{
   background-image: url("/images/Mallorca.png")
 }
 
+.flex-grid {
+  display: flex;
+}
+.col {
+  flex: 1;
+}
+
+@media screen and (max-width: 860px){
+  .flex-grid {
+    display: block !important;
+  }
+  [class*=grid]>[class*=col-4] {
+    flex-basis: 33.333333%;
+    max-width: 83.333333% !important;
+  }
+}
+
 /* ----- CSS for ABOUT -----*/
 /* ----- HEADER -----*/
 .about {
   background-image: url("/images/About.png");
-  padding-top: 10vh;
   margin: 6% 6% 0 6%;
   min-height: 55vh;
   background-size: cover;
@@ -646,7 +644,7 @@ footer p{
 div.about-text-left{
   width: 20%;
   height: 20%;
-  padding-left: 15%;
+  padding-left: 5%;
 }
 
 .offsetpic1{
@@ -662,7 +660,7 @@ div.about-text-right{
   width: 20%;
   height: 20%;
   padding-left: 5%;
-  padding-right:10%;
+  padding-right:5%;
   padding-top:12%;
 }
 
@@ -714,6 +712,12 @@ p.padded{
   background-color: white;
   font-size: 150%;
 }
+
+@media screen and (max-width: 860px) {
+  .quote h3{
+    font-size:69%;
+  }
+}
 /* --- End Quote --- */
 
 section.padded{
@@ -728,18 +732,19 @@ div.quote{
   padding: 5% 23%;
 }
 
-/* ----- CSS for COUNTRIES ------*/
-/* ----- HEADER -----*/
-.overview h1{
-font-size:270%;
-}
-
-.overview h2{
-  padding:5%;
-  padding-bottom: 0;
-}
-
+/* ----- CSS for WORLD ------*/
 /* ----- BODY -----*/
+
+.overview .padd-sec{
+  padding: 0 14% 3% 14%;
+}
+
+.overview
+[class*=grid]>[class*=col-4] {
+  flex-basis: 33.333333%;
+  max-width: 100.333333% !important;
+}
+
 .country-background{
   min-height: 15vh;
   background-size: cover;
@@ -749,7 +754,7 @@ font-size:270%;
 }
 
 .country-background h3{
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .CountryIndonesia{
@@ -782,43 +787,25 @@ font-size:270%;
     visibility: hidden;
     clear: both;
     float: left;
-    margin: 10px auto 5px 20px;
+    /*margin: 10px auto 5px 20px;*/
+    margin: 6% 6% 0 6% !important;
     width: 28%;
     display: none;
   }
 
-
 /* ----- CSS for POSTPAGE ----- */
-section.postpage{
-  margin: 0%;
-  padding:7%;
-}
-
-/* -- Banner -- */
-.post-banner {
-  /*background-image: url("/images/Bali.png");*/
-  padding-top: 10vh;
-  width: 100%;
-  min-height:60vh;
+.post-banner{
+  padding-top: 5vh;
+  margin: 6% 6% 0 6%;
+  /*width: 100%;*/
+  min-height:40vh;
   background-size: cover;
   background-position: 50% 55%;
-
 }
 
 @media screen and (max-width: 860px) {
-  .post-banner{
-    padding-top: 5vh;
-    min-height: 40vh;
-  }
-}
-
-.postpage h2{
-  font-size: 30px
-}
-
-@media screen and (max-width: 860px) {
-  .postpage h2 {
-    font-size: 20px;
+  .postpage h2{
+    font-size: 140%;
   }
 }
 
@@ -826,14 +813,6 @@ section.postpage{
   margin:40px;
   padding-top:0;
   text-align: justify;
-}
-
-@media screen and (max-width: 860px) {
-  .postpage p{
-    margin: 10px 0;
-    text-align: justify;
-    padding-top: 0;
-  }
 }
 
 .postpage img{
@@ -848,41 +827,15 @@ section.postpage{
   max-width: 32% !important;
 }
 
-
-/*.postpage div.sidebar{
-  border:1px solid black;
-}*/
-
 /* ----- MODULAR ELEMENTS -----*/
 
 /* ----- FORMS ----- */
-
-
-/* index*/
-
-
-/* --- RESPONSIVE STYLES ---*/
-/* Smartphones (portrait and landscape) ----------- */
-
-/*
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-
-  .header{
-    padding: 1%;
-    position:fixed;
-    width: 77%;
-    top: 0;
-    background-color: white;
-    /*border-bottom: 1.5px solid black;*/
-/*    box-shadow: 0px 1px 5px rgba(190, 190, 190, 0.46);
-    z-index: 5000;
-  }*/
 
   nav{
     color: #172727;
     display: block;
     text-align: right;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 
   nav a{
@@ -896,19 +849,4 @@ section.postpage{
     border-left: 1px solid #172727;
   }
 
-/*  .banner{
-    display:block;
-    width:100%auto;
-    margin:0;
-  }
-
-/*  h1, h2{
-    font-family: 'Indie Flower', cursive;
-    text-align: center;
-    font-size:50%;
-    padding: 2% 10%;
-    background-color: rgba(255, 255, 255, .6);
-  }
-
-}
 /* Styles */

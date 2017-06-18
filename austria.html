@@ -4,11 +4,11 @@ title: Austria
 categories: [Austria]
 ---
 
-<section class="overview posts">
+<section class="overview">
 <h1>Austria</h1>
-<div class="grid-spaceBetween posts padd-sec">
+<div class="grid-spaceBetween flex-grid posts padd-sec">
 {% for post in site.categories.Austria %}
-<a class='col-6' href="{{post.url}}">
+<a class='col-4_sm-12' href="{{post.url}}">
 <div class="post-background scale-text {{ post.class }}" style="background-image: url('{{post.bannerimage}}')">
   <h2>{{post.title}}</h2>
 </div>

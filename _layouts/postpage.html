@@ -3,14 +3,12 @@ layout: default
 ---
 
 <section class="postpage">
-    <div>
-        <div class="post-banner flex-center post-content" style="background-image: url('{{page.bannerimage}}')">
+        <div class="post-banner flex-center" style="background-image: url('{{page.bannerimage}}')">
           <div>
             <h1> {{ page.posttitle }} </h1>
             <h2> {{page.postsubtitle}} </h2>
           </div>
         </div>
-      <section>
         <div>
           <p>
             {{page.postcontent}}
@@ -22,6 +20,4 @@ layout: default
           </div>
         {% endfor %}
         </div>
-      </section>
-    </div>
 </section>

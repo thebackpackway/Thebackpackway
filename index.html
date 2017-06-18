@@ -29,9 +29,9 @@ svg-class: svg-mobile
 
   <section>
     <h2>Recent Posts</h2>
-    <div class="grid-spaceBetween posts padd-sec">
+    <div class="flex-grid posts padd-sec">
       {% for post in site.posts limit: 6 %}
-      <a class='col-3_sm-12' href="{{post.url}}">
+      <a class='col-4_sm12' href="{{post.url}}">
         <div class="post-background scale-text {{ post.class }}" style="background-image: url('{{post.bannerimage}}')">
           <h3 class="onbackground">{{ post.title }}</h3>
         </div>
@@ -40,46 +40,8 @@ svg-class: svg-mobile
     </div>
   </section>
 
-  <section class="countries">
-    <h2>Countries</h2>
-    <div class="grid-spaceBetween posts">
-
-      <a class='col-2_sm-12 country-background scale-text' href="/indonesia.html">
-        <div class="CountryIndonesia country-background">
-          <h3 class="onbackground">Indonesia</h3>
-        </div>
-      </a>
-
-
-      <a class='col-2_sm-12 country-background scale-text' href="/thailand.html">
-        <div class="CountryThailand country-background">
-          <h3>Thailand</h3>
-        </div>
-      </a>
-      <a class='col-2_sm-12 country-background scale-text' href="/austria.html">
-        <div class="CountryAustria country-background">
-          <h3>Austria</h3>
-        </div>
-      </a>
-      <a class='col-2_sm-12 country-background scale-text' href="/uganda.html">
-        <div class="CountryUganda country-background">
-          <h3>Uganda</h3>
-        </div>
-      </a>
-      <a class='col-2_sm-12 country-background scale-text' href="/croatia.html">
-        <div class="CountryCroatia country-background">
-          <h3>Croatia</h3>
-        </div>
-      </a>
-      <a class='col-2_sm-12 country-background scale-text' href="/czech-republic.html">
-        <div class="CountryCzech country-background">
-          <h3>Czech Republic</h3>
-        </div>
-      </a>
-    </div>
-  </section>
-
   <section class="integrated-map">
+    <h2>Posts by Country</h2>
     <script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
     <script src="https://www.amcharts.com/lib/3/maps/js/worldHigh.js" type="text/javascript"></script>
     <script src="https://www.amcharts.com/lib/3/themes/dark.js" type="text/javascript"></script>
