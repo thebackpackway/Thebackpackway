@@ -16,8 +16,17 @@
 <section class="banner {{page.banner-class}}">
 {% endif %}--->
 <section>
-  <header class="header {{page.header-class}} grid-spaceBetween-middle">
-    <div class="navigation">
+  <header class="header grid-spaceBetween-middle {{page.header-class}}">
+<!---
+    <div>
+      <a href="mailto:Julia@thebackpackway.com" class="fa fa-envelope"></a>
+      <a href="https://www.instagram.com/thebackpackway/" class="fa fa-instagram"></a>
+    </div>
+    <div>
+      <h1 class="brandheader"><a href="/index.html">Thebackpackway</a></h1>
+    </div>
+--->
+    <div class="topnav " id="myTopnav">
       <nav class="col-4 menu">
         <ul class="active-nav">
           <li class="current-item">
@@ -27,7 +36,7 @@
             <a href="/about.html">About</a>
           </li>
           <li>
-            <a href="/austria.html">Austria</a>
+            <a href="/austria/">Austria</a>
           </li>
           <li>
             <a href="/world.html">& the World</a>
@@ -36,7 +45,7 @@
             <a href="sustainability.html">Sustainability</a>
           </li>
         </ul>
-        <a class="toggle-nav" href="#">&#9776;</a>
+        <a href="javascript:void(0)" class="icon" onclick="myFunction()">&#9776;</a>
       </nav>
     </div>
 

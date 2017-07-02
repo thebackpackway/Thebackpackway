@@ -6,6 +6,16 @@ $(".quote").mouseenter(function(){
   });
   });
 
+  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+  function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+          x.className += " responsive";
+      } else {
+          x.className = "topnav";
+      }
+  }
+
 //$(function() {
 //    $(window).on("scroll", function() {
 //        if($(window).scrollTop() > 50) {
@@ -17,11 +27,12 @@ $(".quote").mouseenter(function(){
 //    });
 //});
 
-$(document).ready(function(){
-  $('.toggle-nav').click(function(e){
-    $(this).toggleClass('active');
-    $('.menu ul').toggleClass('active');
 
-    e.preventDefault();
-  });
-});
+//$(document).ready(function(){
+//  $('.toggle-nav').click(function(e){
+//    $(this).toggleClass('active');
+//    $('.menu ul').toggleClass('active');
+//
+//    e.preventDefault();
+//  });
+//});

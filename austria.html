@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Austria
-categories: [Austria]
 ---
 
+<!---
 <section class="overview">
 <h1>Austria</h1>
 <div class="grid-spaceBetween flex-grid posts padd-sec">
@@ -16,3 +16,15 @@ categories: [Austria]
 {% endfor %}
 
 </section>
+--->
+
+{% for austria in site.austria %}
+
+
+<a href="{{ austria.url | prepend: site.baseurl }}">
+        <h2>{{ austria.title }}</h2>
+</a>
+
+<p class="post-excerpt">{{ austria.description | truncate: 160 }}</p>
+
+{% endfor %}

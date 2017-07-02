@@ -1,4 +1,10 @@
-categories:
-- indonesia
-- spain
-- austria
+collections:
+  - austria:
+      output: true
+      permalink: /austria/:path/
+  - world:
+      output: true
+      permalink: /world/:path/
+  - sustainability:
+      output: true
+      permalink: /sustainability/:path/
